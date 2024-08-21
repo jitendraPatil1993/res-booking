@@ -1,0 +1,133 @@
+<section>
+    <div class="banner">   
+        <img class="img-fluid d-block w-100" src="./asset/banner/register.jpg" alt="banner">     
+    </div>      
+</section>
+
+<div class="container" id="contentToExport" #contentToExport>
+    <div class="row" >
+        <!-- Reservation Details -->
+        <div class="section" *ngIf="reservationData">
+            <h2>Reservation Details</h2>
+            <table>
+                <tr>
+                    <th>Location ID</th>
+                    <td>{{ reservationData.locationId }}</td>
+                </tr>
+                <tr>
+                    <th>Room ID</th>
+                    <td>{{ reservationData.roomId }}</td>
+                </tr>
+                <tr>
+                    <th>Customer ID</th>
+                    <td>{{ reservationData.customerId }}</td>
+                </tr>
+                <tr>
+                    <th>Arrival Date</th>
+                    <td>{{ reservationData.arrivalDate }}</td>
+                </tr>
+                <tr>
+                    <th>Departure Date</th>
+                    <td>{{ reservationData.departureDate }}</td>
+                </tr>
+                <tr>
+                    <th>Reservation Date</th>
+                    <td>{{ reservationData.reservationDate }}</td>
+                </tr>
+                <tr>
+                    <th>Total Price</th>
+                    <td>{{ reservationData.totalPrice }}</td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td>{{ reservationData.status }}</td>
+                </tr>
+                <tr>
+                    <th>Paid Amount</th>
+                    <td>{{ reservationData.paidAmount }}</td>
+                </tr>
+                <tr>
+                    <th>Number of Guests</th>
+                    <td>{{ reservationData.numberOfGuest }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Customer Details -->
+        <div class="section" *ngIf="customerData">
+            <h2>Customer Details</h2>
+            <table>
+                <tr>
+                    <th>Customer ID</th>
+                    <td>{{ customerData.customerId }}</td>
+                </tr>
+                <tr>
+                    <th>Age</th>
+                    <td>{{ customerData.age }}</td>
+                </tr>
+                <tr>
+                    <th>First Name</th>
+                    <td>{{ customerData.firstName }}</td>
+                </tr>
+                <tr>
+                    <th>Middle Name</th>
+                    <td>{{ customerData.middleName }}</td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>{{ customerData.lastName }}</td>
+                </tr>
+                <tr>
+                    <th>Mobile Number</th>
+                    <td>{{ customerData.mobileNumber1 }}</td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>{{ customerData.initialAddress }}</td>
+                </tr>
+                <tr>
+                    <th>State</th>
+                    <td>{{ customerData.state }}</td>
+                </tr>
+                <tr>
+                    <th>Pin Code</th>
+                    <td>{{ customerData.pinCode }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Payment Details -->
+        <div class="section" *ngIf="paymentData">
+            <h2>Payment Details</h2>
+            <table>
+                <tr>
+                    <th>Payment Mode</th>
+                    <td>{{ paymentData.payment_mode }}</td>
+                </tr>
+                <tr>
+                    <th>Paid Amount</th>
+                    <td>{{ paymentData.paid_amount }}</td>
+                </tr>
+                <tr>
+                    <th>Due Amount</th>
+                    <td>{{ paymentData.due }}</td>
+                </tr>
+                <tr>
+                    <th>Total Amount</th>
+                    <td>{{ paymentData.amount }}</td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    
+</div>
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+        <a  class="btn btn-outline-primary btn-sm text-center" (click)="exportToPDF()">Print</a>
+    </div>
+    </div>
+</div>
+
+  

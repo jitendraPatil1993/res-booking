@@ -1,0 +1,25 @@
+.room-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .room-card h3 {
+    margin-top: 0;
+  }
+  
+  .room-card ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .room-card li {
+    padding: 5px 0;
+  }
+  
+  .no-data {
+    font-style: italic;
+    color: #666;
+  }

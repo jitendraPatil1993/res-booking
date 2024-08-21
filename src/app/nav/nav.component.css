@@ -1,0 +1,13 @@
+.menu{
+    position: absolute;        
+    top: 1%;
+    left: 2%;
+}
+.menu h2{
+    font-size: 48px;
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, #FF5722, #FFEB3B 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}

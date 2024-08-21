@@ -1,0 +1,165 @@
+/* #booking-section .form-container {
+    background: #fff;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+    margin-top: -40px !important;
+    
+} */
+.banner{
+    position: relative;
+    margin-top: -140px;
+    z-index:-999;
+}
+
+#booking-section .form-container {
+    background: #fff;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+    margin-top: -40px !important;
+    
+}
+#booking-section .form-container h2 {
+    color: #252525;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 0 14px;
+}
+
+#booking-section .form-container h2 span {
+    color: #1ba47f;
+}
+
+#booking-section .form-container form input {
+    border: 2px solid #e1e1e1;
+    border-radius: 2px;
+    color: #727272 !important;
+    font: 400 15px / 1.6em "Raleway", sans-serif;
+    height: 44px;
+    margin-top: 20px;
+    padding-bottom: 6px;
+    
+}
+#booking-section .form-container form select {
+    border: 2px solid #e1e1e1;
+    border-radius: 2px;
+    color: #727272 !important;
+    font: 400 15px / 1.6em "Raleway", sans-serif;
+    height: 44px;
+    margin-top: 20px;
+    padding-bottom: 6px;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+
+#booking-section .form-container form button {
+    background-color: #21baa3;
+    border: 2px solid #21baa3;
+    border-radius: 2px;
+    color: #fff;
+    display: block;
+    font: 700 15px / 1.6em "Raleway", sans-serif;
+    margin-bottom: 22px;
+    margin-top: 20px;
+    padding: 8px 53px;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    #booking-section .form-container form button{
+        padding: 8px 20px;
+    }   
+  }
+
+  .banner{
+    position: relative;
+    margin-top: -140px;
+    z-index:-999;
+}
+.heading{
+    color: #fff;
+    padding: 15px 18px;
+    line-height: 20px;
+    padding-bottom: 13px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #3a3138;
+}
+.form-check{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+.card-title{   
+    font-family: "Muli";
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.card-title:hover{
+    color:#871b2a;   
+}
+.card-text{
+    text-overflow: ellipsis;
+}
+.price{
+    position: relative;
+    font-weight: 600;
+    margin-top: -20px;
+}
+
+.priceBtn{
+    background-color: #2b4162;
+    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+    color: #fff;
+}
+.priceBtn:hover{
+    color: #FFD700;
+    font-weight: 600;
+}
+
+.book-now {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;     
+        text-align:center;
+        border: none;
+        background-size: 300% 100%;    
+        border-radius: 50px;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        text-transform: uppercase;
+        letter-spacing: .6px;
+        padding: 5px 20px;    
+        background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.book-now:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+/* .modal-backdrop { display: block !important; } */
+

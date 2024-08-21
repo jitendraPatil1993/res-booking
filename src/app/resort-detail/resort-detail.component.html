@@ -1,0 +1,72 @@
+<!-- Modal Structure -->
+<div class="modal fade modal-lg" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reservationModalLabel">Reservation Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="locationId" class="form-label">Location ID</label>
+              <input type="number" id="locationId" formControlName="locationId" class="form-control" readonly />
+            </div>
+            <div class="mb-3">
+              <label for="roomId" class="form-label">Room ID</label>
+              <input type="number" id="roomId" formControlName="roomId" class="form-control" readonly />
+            </div>
+            <div class="mb-3">
+              <label for="customerId" class="form-label">Customer ID</label>
+              <input type="number" id="customerId" formControlName="customerId" class="form-control" />
+              <div *ngIf="reservationForm.get('customerId')?.invalid && reservationForm.get('customerId')?.touched" class="text-danger">
+                Customer ID is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="arrivalDate" class="form-label">Arrival Date</label>
+              <input type="date" id="arrivalDate" formControlName="arrivalDate" [value] = "item.arrivalDate" class="form-control" readonly />
+            </div>
+            <div class="mb-3">
+              <label for="departureDate" class="form-label">Departure Date</label>
+              <input type="date" id="departureDate" formControlName="departureDate" [value] = "item.departureDate" class="form-control" readonly />
+            </div>
+            <div class="mb-3">
+              <label for="reservationDate" class="form-label">Reservation Date</label>
+              <input type="datetime-local" id="reservationDate" formControlName="reservationDate" class="form-control" readonly />
+            </div>
+            <div class="mb-3">
+              <label for="totalPrice" class="form-label">Total Price</label>
+              <input type="number" id="totalPrice" formControlName="totalPrice" class="form-control" readonly />
+            </div>
+            <div class="mb-3">
+              <label for="status" class="form-label">Status</label>
+              <select id="status" formControlName="status" class="form-select">
+                <option value="CONFIRM">Confirm</option>
+                <option value="CHECKED-IN">Checked-In</option>
+                <option value="CHECKED-OUT">Checked-Out</option>
+              </select>
+              <div *ngIf="reservationForm.get('status')?.invalid && reservationForm.get('status')?.touched" class="text-danger">
+                Status is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="paidAmount" class="form-label">Paid Amount</label>
+              <input type="number" id="paidAmount" formControlName="paidAmount" class="form-control" />
+              <div *ngIf="reservationForm.get('paidAmount')?.invalid && reservationForm.get('paidAmount')?.touched" class="text-danger">
+                Paid Amount is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="numberOfGuest" class="form-label">Number of Guests</label>
+              <input type="number" id="numberOfGuest" formControlName="numberOfGuest" class="form-control" readonly />
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="reservationForm.invalid">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <app-customer-details></app-customer-details>
+  

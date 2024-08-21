@@ -1,0 +1,109 @@
+
+<!-- Modal Structure -->
+<div class="modal fade modal-lg" id="customerModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="customerModalLabel">Customer Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="customerId" class="form-label">Customer ID</label>
+              <input type="number" id="customerId" formControlName="customerId" class="form-control" />
+              <div *ngIf="customerForm.get('customerId')?.invalid && customerForm.get('customerId')?.touched" class="text-danger">
+                Customer ID is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Age</label>
+              <input type="number" id="age" formControlName="age" class="form-control" />
+              <div *ngIf="customerForm.get('age')?.invalid && customerForm.get('age')?.touched" class="text-danger">
+                Age is required and must be a positive number.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="birthDate" class="form-label">Birth Date</label>
+              <input type="date" id="birthDate" formControlName="birthDate" class="form-control" />
+              <div *ngIf="customerForm.get('birthDate')?.invalid && customerForm.get('birthDate')?.touched" class="text-danger">
+                Birth Date is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" id="firstName" formControlName="firstName" class="form-control" />
+              <div *ngIf="customerForm.get('firstName')?.invalid && customerForm.get('firstName')?.touched" class="text-danger">
+                First Name is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="middleName" class="form-label">Middle Name</label>
+              <input type="text" id="middleName" formControlName="middleName" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" id="lastName" formControlName="lastName" class="form-control" />
+              <div *ngIf="customerForm.get('lastName')?.invalid && customerForm.get('lastName')?.touched" class="text-danger">
+                Last Name is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="country" class="form-label">Country</label>
+              <input type="text" id="country" formControlName="country" class="form-control" />
+              <div *ngIf="customerForm.get('country')?.invalid && customerForm.get('country')?.touched" class="text-danger">
+                Country is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="state" class="form-label">State</label>
+              <input type="text" id="state" formControlName="state" class="form-control" />
+              <div *ngIf="customerForm.get('state')?.invalid && customerForm.get('state')?.touched" class="text-danger">
+                State is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="city" class="form-label">City</label>
+              <input type="text" id="city" formControlName="city" class="form-control" />
+              <div *ngIf="customerForm.get('city')?.invalid && customerForm.get('city')?.touched" class="text-danger">
+                City is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="pinCode" class="form-label">Pin Code</label>
+              <input type="number" id="pinCode" formControlName="pinCode" class="form-control" />
+              <div *ngIf="customerForm.get('pinCode')?.invalid && customerForm.get('pinCode')?.touched" class="text-danger">
+                Pin Code is required and must be a 6-digit number.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="initialAddress" class="form-label">Initial Address</label>
+              <textarea id="initialAddress" formControlName="initialAddress" class="form-control"></textarea>
+              <div *ngIf="customerForm.get('initialAddress')?.invalid && customerForm.get('initialAddress')?.touched" class="text-danger">
+                Initial Address is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="mobileNumber1" class="form-label">Mobile Number 1</label>
+              <input type="tel" id="mobileNumber1" formControlName="mobileNumber1" class="form-control" />
+              <div *ngIf="customerForm.get('mobileNumber1')?.invalid && customerForm.get('mobileNumber1')?.touched" class="text-danger">
+                Mobile Number 1 is required and must be a 10-digit number.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="mobileNumber2" class="form-label">Mobile Number 2 (Optional)</label>
+              <input type="tel" id="mobileNumber2" formControlName="mobileNumber2" class="form-control" />
+              <div *ngIf="customerForm.get('mobileNumber2')?.invalid && customerForm.get('mobileNumber2')?.touched" class="text-danger">
+                Mobile Number 2 must be a 10-digit number if provided.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="customerForm.invalid">Submit</button>
+</form>
+</div>
+<div class="modal-footer">
+    <!-- <button type="button" class="btn btn-secondary" (click)="onSubmitCustomer()">Next</button> -->
+  </div>
+</div>
+</div>
+</div>
+<app-payment></app-payment>   

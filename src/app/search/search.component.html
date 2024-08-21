@@ -1,0 +1,106 @@
+<!-- 
+
+<div *ngIf="combinedData.length > 0; else noData">
+    <div *ngFor="let item of combinedData; let i = index" class="room-card">
+      {{i+1}}
+      <h3>Location Name: {{ item.locationName }}</h3> <!-- Adjust 'roomName' to match your room object property -->
+      <p>Room ID: {{ item.roomId }}</p>
+      <p>LocationID ID: {{ item.locationId }}</p>
+      <p> pricePerDayPerPerson: {{ item.pricePerDayPerPerson }}</p> <!-- Adjust 'description' to match your room object property -->
+      <p> guestCapacity: {{ item.guestCapacity }}</p> 
+      <p>Room ID: {{ item.availability.roomId }}</p>
+      Date: {{ item.availability.stayDateFrom }}, Status: {{ item.availability.stayDateTo }}
+      
+  <p> stayDateTo: {{item.availability.stayDateTo }}</p> 
+  <p> arrivalDays: {{item.availability.arrivalDays }}</p> 
+  <p> departureDays: {{item.availability.departureDays }}</p> 
+  <p> minStay: {{item.availability.minStay }}</p> 
+  <p> maxStay: {{item.availability.maxStay }}</p>
+     
+  
+      
+      <hr>
+    </div>
+  </div>
+  <ng-template #noData>
+    <p>No data itemable.</p>
+  </ng-template>
+  <div>
+    <label for="locationSelect">Select Location:</label>
+    <select id="locationSelect" (change)="onFilterChange()" [(ngModel)]="selectedLocation">
+      <option value="">-- All Locations --</option>
+      <option *ngFor="let location of locationOptions" [value]="location">{{ location }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="guestCapacitySelect">Select Guest Capacity:</label>
+    <select id="guestCapacitySelect" (change)="onFilterChange()" [(ngModel)]="selectedGuestCapacity">
+      <option value="">-- All Capacities --</option>
+      <option *ngFor="let capacity of guestCapacityOptions" [value]="capacity">{{ capacity }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="priceSelect">Select Price Per Day Per Person:</label>
+    <select id="priceSelect" (change)="onFilterChange()" [(ngModel)]="selectedPrice">
+      <option value="">-- All Prices --</option>
+      <option *ngFor="let price of priceOptions" [value]="price">{{ price | currency:'USD' }}</option>
+    </select>
+  </div>
+  
+  <div *ngIf="filteredData.length">
+    <h3>Filtered Results:</h3>
+    <ul>
+      <li *ngFor="let item of filteredData">
+        <p><strong>Room ID:</strong> {{ item.roomId }}</p>
+        <p><strong>Room Name:</strong> {{ item.roomName }}</p>
+        <p><strong>Description:</strong> {{ item.description }}</p>
+        <p><strong>Location:</strong> {{ item.locationName }}</p>
+        <p><strong>Guest Capacity:</strong> {{ item.guestCapacity }}</p>
+        <p><strong>Price per Day per Person:</strong> {{ item.pricePerDayPerPerson | currency:'USD' }}</p>
+        <p><strong>Date:</strong> {{ item.availability.date }}</p>
+        <p><strong>Status:</strong> {{ item.availability.status }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <div>
+    <label for="locationSelect">Select Location:</label>
+    <select id="locationSelect" (change)="onFilterChange()" [(ngModel)]="selectedLocation">
+      <option value="">-- All Locations --</option>
+      <option *ngFor="let location of locationOptions" [value]="location">{{ location }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="guestCapacitySelect">Select Guest Capacity:</label>
+    <select id="guestCapacitySelect" (change)="onFilterChange()" [(ngModel)]="selectedGuestCapacity">
+      <option value="">-- All Capacities --</option>
+      <option *ngFor="let capacity of guestCapacityOptions" [value]="capacity">{{ capacity }}</option>
+    </select>
+  </div>
+  
+  <div>
+    <label for="priceSelect">Select Price Per Day Per Person:</label>
+    <select id="priceSelect" (change)="onFilterChange()" [(ngModel)]="selectedPrice">
+      <option value="">-- All Prices --</option>
+      <option *ngFor="let price of priceOptions" [value]="price">{{ price | currency:'USD' }}</option>
+    </select>
+  </div>
+  
+  <div *ngIf="filteredData.length">
+    <h3>Filtered Results:</h3>
+    <ul>
+      <li *ngFor="let item of filteredData">
+        <p><strong>Room ID:</strong> {{ item.roomId }}</p>
+        <p><strong>Room Name:</strong> {{ item.roomName }}</p>
+        <p><strong>Description:</strong> {{ item.description }}</p>
+        <p><strong>Location:</strong> {{ item.locationName }}</p>
+        <p><strong>Guest Capacity:</strong> {{ item.guestCapacity }}</p>
+        <p><strong>Price per Day per Person:</strong> {{ item.pricePerDayPerPerson | currency:'USD' }}</p>
+        <p><strong>Date:</strong> {{ item.availability.date }}</p>
+        <p><strong>Status:</strong> {{ item.availability.status }}</p>
+      </li>
+    </ul>
+  </div> --> -->

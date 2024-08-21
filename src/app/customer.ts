@@ -1,0 +1,15 @@
+export interface Customer {
+    "customerId": number,
+    "age": number,
+    "birthDate": number,
+    "firstName": string,
+    "middleName": string,
+    "lastName" : string,
+    "country": string,
+    "state": string,
+    "city": string,
+    "pinCode": number,
+    "initialAddress": string,
+    "mobileNumber1": number,
+    "mobileNumber2": number,
+}

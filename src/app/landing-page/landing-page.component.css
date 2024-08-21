@@ -1,0 +1,17 @@
+
+header{
+    position: absolute;     
+    width: -webkit-fill-available;    
+    background: -webkit-radial-gradient(#142725, #000000);
+    background: radial-gradient(#142725, #000000);    
+    opacity: 0.9;
+    top: 50%;
+    right: 44%;
+    opacity: 0.9;
+    background-size:cover;
+    background-blend-mode: hard-light;
+   color: #ffffff;
+}
+/* .modal-backdrop {
+    display: none !important;
+  } */

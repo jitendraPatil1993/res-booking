@@ -1,0 +1,46 @@
+<!-- Modal Structure -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="paymentModalLabel">Payment Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="payment_mode" class="form-label">Payment Mode</label>
+              <input type="text" id="payment_mode" formControlName="payment_mode" class="form-control" />
+              <div *ngIf="paymentForm.get('payment_mode')?.invalid && paymentForm.get('payment_mode')?.touched" class="text-danger">
+                Payment Mode is required.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="paid_amount" class="form-label">Paid Amount</label>
+              <input type="number" id="paid_amount" formControlName="paid_amount" class="form-control" />
+              <div *ngIf="paymentForm.get('paid_amount')?.invalid && paymentForm.get('paid_amount')?.touched" class="text-danger">
+                Paid Amount is required and must be a non-negative number.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="due" class="form-label">Due Amount</label>
+              <input type="number" id="due" formControlName="due" class="form-control" />
+              <div *ngIf="paymentForm.get('due')?.invalid && paymentForm.get('due')?.touched" class="text-danger">
+                Due Amount is required and must be a non-negative number.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="amount" class="form-label">Total Amount</label>
+              <input type="number" id="amount" formControlName="amount" class="form-control" />
+              <div *ngIf="paymentForm.get('amount')?.invalid && paymentForm.get('amount')?.touched" class="text-danger">
+                Amount is required and must be a non-negative number.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal"  [disabled]="paymentForm.invalid">Save</button>
+          </form>
+          
+        </div>
+       
+      </div>
+    </div>
+  </div>

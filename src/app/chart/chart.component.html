@@ -1,0 +1,59 @@
+<!-- Modal Structure for Reservation -->
+<div class="modal fade modal-lg" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reservationModalLabel">Reservation Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="reservationForm" (ngSubmit)="onSubmitReservation()">
+            <!-- Form Fields -->
+            <button type="submit" class="btn btn-primary" [disabled]="reservationForm.invalid">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#customerModal" (click)="onSubmitReservation()">Next</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal Structure for Customer Details -->
+<div class="modal fade modal-lg" id="customerModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="customerModalLabel">Customer Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="customerForm" (ngSubmit)="onSubmitCustomer()">
+            <!-- Form Fields -->
+            <button type="submit" class="btn btn-primary" [disabled]="customerForm.invalid">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#paymentModal" (click)="onSubmitCustomer()">Next</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Modal Structure for Payment Details -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="paymentModalLabel">Payment Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="paymentForm" (ngSubmit)="onSubmitPayment()">
+            <!-- Form Fields -->
+            <button type="submit" class="btn btn-primary" [disabled]="paymentForm.invalid">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
